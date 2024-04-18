@@ -12,5 +12,6 @@ npm install @coinbase/onchainkit
 
 https://codepen.io/dariocorsi/pen/rLdpWW
 
-## Created by getoffdeez and Universe
-## Artist ting
+## Created by 
+getoffdeez and Universe
+artist ting
