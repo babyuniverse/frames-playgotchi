@@ -1,35 +1,38 @@
+/* global.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom variables */
 :root {
   --foreground: 249, 248, 252;
   --background: #0a090b;
 }
 
+/* Apply global styles */
 body {
   color: rgb(var(--foreground));
   background-color: var(--background);
-    cursor: url(/cursor.png), auto;
+  cursor: url(/cursor.png), auto;
 }
 
+/* Define utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* custom styles */
-
+/* Custom styles for Frame component */
 .frame {
   width: 800px;
   height: 300px;
 }
 
-
 .prize-display {
   position: absolute;
-  top: 100;
+  top: 100px;
 }
 
 .row {
@@ -45,25 +48,36 @@ body {
   height: 100%;
   display: inline-block;
   position: relative;
-  animation-duration: .5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 .row.ltr img {
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   animation-name: scrollRight;
 }
 
 .row.rtl img {
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   animation-name: scrollLeft;
 }
 
-@keyframes scrollRight {
-  0% { left: 0%; }
-  100% { left: -100%; }
+@keyframes scrollLeft {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
-@keyframes scrollLeft {
-  0% { right: 0%; }
-  100% { right: -100%; }
+@keyframes scrollRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
